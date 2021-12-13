@@ -1,0 +1,52 @@
+.proof {
+  background: var(--bg-color-tertiary);
+  padding: 20px;
+}
+
+.proof__title {
+  .main-title(36px; 1.1);
+  margin: 5px 0 40px;
+  padding: 0;
+}
+
+.proof__details {
+  display: grid;
+}
+
+.proof__detail {
+  display: flex;
+  align-items: center;
+
+  &--primary {
+    .main-title(14px; 1.4);
+    text-transform: uppercase;
+  }
+
+  &--secondary {
+    flex-direction: column-reverse;
+    border: 1px solid var(--gray);
+    border-radius: 3px;
+  }
+
+  &--secondary .proof__num {
+    .main-title(24px);
+  }
+
+  &--secondary .proof__param {
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+}
+
+.proof__param {
+  margin: 0;
+}
+
+.proof__num {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.proof__slider {
+  padding: 25px 0;
+}

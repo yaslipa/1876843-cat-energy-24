@@ -1,0 +1,16 @@
+// Paths
+@fonts: "../fonts";
+@images: "../img";
+
+// Fonts
+@font-family-main: "Arial", "Helvetica", sans-serif;
+@font-family-special: "Oswald", "Arial", "Helvetica", sans-serif;
+
+// Titles
+.main-title(@font-size: 16px, @line-height: 1) {
+  font-family: @font-family-special;
+  font-size: @font-size;
+  font-weight: 400;
+  line-height: @line-height;
+  color: var(--text-color-secondary);
+}
