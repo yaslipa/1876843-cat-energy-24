@@ -13,7 +13,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px 20px;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__socials {
@@ -21,6 +28,10 @@
   margin-bottom: 21px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .page-footer__copywrite {

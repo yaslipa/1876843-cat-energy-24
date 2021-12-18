@@ -1,10 +1,10 @@
 .proof {
   background: var(--bg-color-tertiary);
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .proof__title {
-  .main-title(36px; 1.1);
+  .set-font(36px; 1.1);
   margin: 5px 0 40px;
   padding: 0;
 }
@@ -18,8 +18,7 @@
   align-items: center;
 
   &--primary {
-    .main-title(14px; 1.4);
-    text-transform: uppercase;
+    .set-font(14px; 1.4; uppercase);
   }
 
   &--secondary {
@@ -29,7 +28,7 @@
   }
 
   &--secondary .proof__num {
-    .main-title(24px);
+    .set-font(24px);
   }
 
   &--secondary .proof__param {

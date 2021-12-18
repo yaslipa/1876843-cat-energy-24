@@ -1,10 +1,9 @@
 .main-nav {
+  .set-font(20px; 1; uppercase);
   display: flex;
   flex-direction: column;
-  font-family: @font-family-special;
-  font-size: 20px;
+  margin: 0 -20px;
   font-weight: 500;
-  text-transform: uppercase;
   text-align: center;
   background-color: var(--bg-color-primary);
 }
@@ -77,7 +76,7 @@
   color: var(--black);
 
   &--current {
-    color: var(--color-main-hover);
+    color: var(--color-main-dark);
   }
 
   &:hover:not(&--current) {

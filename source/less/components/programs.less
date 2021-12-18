@@ -1,8 +1,9 @@
-.purposes {
-  padding: 0 20px;
+.programs {
+  display: flex;
+  flex-direction: column;
 }
 
-.purposes__item {
+.programs__item {
   padding: 20px 20px 0;
   background-color: var(--bg-color-secondary);
 
@@ -11,25 +12,23 @@
   }
 }
 
-.purposes__title {
-  .main-title(24px; 1.6);
+.programs__title {
+  .set-font(24px; 1.6; uppercase);
   margin: 9px 0 28px 71px;
   padding: 0;
-  text-transform: uppercase;
 }
 
-.purposes__text {
+.programs__text {
   margin: 0;
   padding: 0 0 20px 0;
   border-bottom: 1px solid #d9d9d9;
 }
 
-.purposes__link {
-  .main-title();
+.programs__link {
+  .set-font(16px; 1; uppercase);
   display: inline-block;
   position: relative;
   padding: 20px 45px 22px 0;
-  text-transform: uppercase;
 
   &:active {
     opacity: 0.3;
