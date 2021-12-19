@@ -1,0 +1,26 @@
+.main-title {
+  .set-font(24px; 1.1);
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 33px;
+
+  & span {
+    display: flex;
+    width: fit-content;
+    padding: 0 20px;
+    background-color: var(--bg-color-primary);
+  }
+
+  &::after {
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--btn-bg-primary);
+    content: "";
+  }
+}

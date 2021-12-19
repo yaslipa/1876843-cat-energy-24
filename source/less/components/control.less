@@ -1,0 +1,58 @@
+.control {
+  display: flex;
+}
+
+.control__label {
+  .set-font(16px; 1.2; uppercase);
+  padding: 5px 0 0 15px;
+  color: var(--gray-darkest);
+}
+
+.control__mark {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--gray);
+
+  &::before {
+    position: absolute;
+    content: "";
+  }
+}
+
+.control__input {
+  &[type="radio"] ~ .control__mark {
+    border-radius: 50%;
+  }
+
+  &[type="radio"]:checked ~ .control__mark::before {
+    width: 14px;
+    height: 14px;
+    background-color: var(--btn-bg-primary);
+    border-radius: 50%;
+  }
+
+  &[type="checkbox"]:checked ~ .control__mark::before {
+    width: 20px;
+    height: 9px;
+    border-left: 2px solid var(--btn-bg-primary);
+    border-bottom: 2px solid var(--btn-bg-primary);
+    transform: translateY(-2px) skewX(13deg) rotate(-40deg);
+  }
+
+  &:hover ~ .control__mark {
+    border-color: #bababa;
+  }
+
+  &:focus ~ .control__mark {
+    border-color: var(--gray-darken);
+  }
+
+  &:disabled ~ * {
+    opacity: 0.3;
+  }
+}

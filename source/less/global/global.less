@@ -1,0 +1,38 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  min-width: @min-width;
+  max-width: @max-width;
+  margin: 0 auto;
+  padding: 0 @mobile-padding;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 @tablet-padding;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 @desktop-padding;
+  }
+}
+
+.main-nav__list,
+.socials__list,
+.programs__list,
+.order-form__list,
+.about-product__list,
+.product__details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

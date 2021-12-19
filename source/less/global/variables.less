@@ -1,0 +1,26 @@
+// Paths
+@fonts: "../fonts";
+@images: "../img";
+
+// Fonts
+@font-family-main: "Arial", "Helvetica", sans-serif;
+@font-family-special: "Oswald", "Arial", "Helvetica", sans-serif;
+
+.set-font(@size: 16px; @line-height: 1; @tt: none) {
+  font-family: @font-family-special;
+  font-size: @size;
+  font-weight: 400;
+  line-height: @line-height;
+  color: var(--text-color-secondary);
+  text-transform: @tt;
+}
+
+// Parametres
+@min-width: 320px;
+@max-width: 1440px;
+@mobile-width-only: 767px;
+@tablet-width: 768px;
+@desktop-width: 1440px;
+@mobile-padding: 20px;
+@tablet-padding: 30px;
+@desktop-padding: 110px;

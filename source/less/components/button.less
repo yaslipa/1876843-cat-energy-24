@@ -1,0 +1,18 @@
+.button {
+  display: block;
+  padding: 10px 26px;
+  .set-font(16px; 1.25; uppercase);
+  text-align: center;
+  color: var(--btn-text-primary);
+  background-color: var(--btn-bg-primary);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--btn-bg-primary-hover);
+  }
+
+  &:active {
+    color: rgba(var(--white-rgb), 0.3);
+  }
+}
