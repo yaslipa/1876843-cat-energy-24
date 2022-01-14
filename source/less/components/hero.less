@@ -1,19 +1,41 @@
 .hero {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   font-family: @font-family-special;
   line-height: 1;
-  text-align: center;
-  color: var(--white);
-  background: no-repeat 50% 0;
-  background-size: 320px 302px;
-  background-image:
-    linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 302px, transparent 302px),
-    url("@{images}/content/hero-bg-mobile.jpg");
 
-  & .button {
-    font-size: 14px;
-    margin-top: 2px;
+  @media (max-width: @mobile-width-only) {
+    min-height: 302px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: var(--white);
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 453px;
+      height: 302px;
+      background: no-repeat 50% 0;
+      background-size: auto 302px;
+      background-image:
+        linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 302px, transparent 302px),
+        url("@{images}/content/hero-bg-mobile.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 553px;
+    margin-bottom: 82px;
   }
 }
 
@@ -21,10 +43,74 @@
   margin: 7px 0 25px 0;
   font-size: 36px;
   font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    margin: 40px 0 40px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    margin: 80px 0 40px 80px;
+  }
 }
 
 .hero__slogan {
   margin: 0 0 29px 0;
   font-size: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin: 0 0 50px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 50px 80px;
+  }
+}
+
+.hero__img {
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+  }
+
+  @media (min-width: @tablet-width) {
+    z-index: -1;
+    align-self: center;
+    order: 4;
+    width: 709px;
+    margin-top: -80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    margin: 0 0 0 230px;
+    width: 552px;
+  }
+}
+
+.hero__button {
+  font-size: 20px;
+  width: max-content;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    max-width: 453px;
+    margin-top: 2px;
+    font-size: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    margin-left: 91px;
+    padding: 12px 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    margin-left: 80px;
+    padding: 15px 26px;
+  }
 }

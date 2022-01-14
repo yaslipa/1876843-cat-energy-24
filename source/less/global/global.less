@@ -13,7 +13,7 @@
 
 .container {
   min-width: @min-width;
-  max-width: @max-width;
+  width: 100%;
   margin: 0 auto;
   padding: 0 @mobile-padding;
 
@@ -22,6 +22,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     padding: 0 @desktop-padding;
   }
 }
