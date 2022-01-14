@@ -1,11 +1,33 @@
 .page-header {
   position: relative;
   min-height: 65px;
-  background-color: var(--bg-color-primary);
+  color: var(--black);
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    background-color: var(--bg-color-primary);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    min-height: 141px;
+  }
 }
 
 .page-header__logo {
-  position: absolute;
   padding: 10px 20px;
-  margin-left: -20px;
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    justify-content: space-between;
+    width: 65%;
+  }
 }

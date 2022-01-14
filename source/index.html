@@ -20,15 +20,10 @@
           <use xlink:href="img/sprite.svg#logo-text"></use>
         </svg>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--open" type="button">
+      <nav class="main-nav main-nav--no-js">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-
-        <!-- При открытом меню модификатор кнопки меняется на .main-nav__toggle--close -->
-        <!-- <button class="main-nav__toggle main-nav__toggle--close" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button> -->
 
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -48,8 +43,12 @@
       <section class="hero container">
         <h1 class="hero__title">Функциональное<br> питание для&nbsp;котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero__img" src="img/content/can-mobile.png" width="280" height="270" alt="Cat Energy Pro c курицей 500 г.">
-        <a class="button" href="form.html">Подобрать программу</a>
+        <picture class="hero__img">
+          <source media="(min-width: 1280px)" srcset="img/can-desktop.png">
+          <source media="(min-width: 768px)" srcset="img/can-tablet.jpg">
+          <img src="img/can-mobile.png" alt="Cat Energy Pro c курицей 500 г.">
+        </picture>
+        <a class="hero__button button" href="form.html">Подобрать программу</a>
       </section>
 
       <section class="programs container">
@@ -88,26 +87,31 @@
 
       <section class="proof">
         <div class="container">
-          <h2 class="proof__title">Живой пример</h2>
-          <p class="proof__text">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день. </p>
-          <dl class="proof__details">
-            <div class="proof__detail proof__detail--secondary">
-              <dt class="proof__param">Cнижение веса</dt>
-              <dd class="proof__num">5&nbsp;кг</dd>
-            </div>
-            <div class="proof__detail proof__detail--secondary">
-              <dt class="proof__param">Затрачено времени</dt>
-              <dd class="proof__num">60&nbsp;дней</dd>
-            </div>
-            <div class="proof__detail proof__detail--primary">
-              <dt class="proof__param">Затраты на питание:</dt>
-              <dd class="proof__num">15&nbsp;000&nbsp;руб.</dd>
-            </div>
-          </dl>
+          <div class="proof_description">
+            <h2 class="proof__title">Живой пример</h2>
+            <p class="proof__text">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день. </p>
+            <dl class="proof__details">
+              <div class="proof__detail proof__detail--secondary">
+                <dt class="proof__param">Cнижение веса</dt>
+                <dd class="proof__num">5&nbsp;кг</dd>
+              </div>
+              <div class="proof__detail proof__detail--secondary">
+                <dt class="proof__param">Затрачено времени</dt>
+                <dd class="proof__num">60&nbsp;дней</dd>
+              </div>
+              <div class="proof__detail proof__detail--primary">
+                <dt class="proof__param">Затраты на питание:</dt>
+                <dd class="proof__num">15&nbsp;000&nbsp;руб.</dd>
+              </div>
+            </dl>
+          </div>
           <!-- Slider -->
           <div class="proof__slider cat-slider">
             <label class="cat-slider__label" for="cat-before">Было</label>
             <input class="cat-slider__control cat-slider__control--before visually-hidden" type="radio" name="cat-toggle" value="before" id="cat-before" checked>
+
+            <label class="cat-slider__label" for="cat-after">Стало</label>
+            <input class="cat-slider__control cat-slider__control--after visually-hidden" type="radio" name="cat-toggle" value="after" id="cat-after">
 
             <div class="range cat-slider__range">
               <div class="range__control">
@@ -115,12 +119,15 @@
               </div>
             </div>
 
-            <label class="cat-slider__label" for="cat-after">Стало</label>
-            <input class="cat-slider__control cat-slider__control--after visually-hidden" type="radio" name="cat-toggle" value="after" id="cat-after">
-
             <div class="cat-slider__images">
-              <img class="cat-slider__img cat-slider__img--before" src="img/content/cat-fat-mobile.png" alt="Очень толстый кот.">
-              <img class="cat-slider__img cat-slider__img--after" src="img/content/cat-skinny-mobile.png" alt="Худой кот.">
+              <picture class="cat-slider__img cat-slider__img--before">
+                <source media="(min-width: 768px)" srcset="img/slider/cat-fat-desktop.png">
+                <img src="img/slider/cat-fat-mobile.png" alt="Очень толстый кот.">
+              </picture>
+              <picture class="cat-slider__img cat-slider__img--after">
+                <source media="(min-width: 768px)" srcset="img/slider/cat-skinny-desktop.png">
+                <img src="img/slider/cat-skinny-mobile.png" alt="Худой кот.">
+              </picture>
             </div>
           </div>
           <!-- /Slider -->
@@ -129,68 +136,73 @@
     </main>
 
     <footer class="page-footer">
-      <section class="contacts page-footer__contacts container">
-        <h2 class="contacts__title">Приглашаем<br> к&nbsp;сотрудничеству<br> дилеров!</h2>
-        <address class="contacts__address">
-          <p class="contacts__text">ул. Большая Конюшенная, д.&nbsp;19/8</p>
-          <p class="contacts__text">Санкт-Петербург</p>
-        </address>
-      </section>
+      <div class="container">
+        <section class="contacts page-footer__contacts">
+          <h2 class="contacts__title">Приглашаем<br>к&nbsp;сотрудничеству<br>дилеров!</h2>
+          <address class="contacts__address">
+            <p class="contacts__text">ул. Большая<br> Конюшенная, д.&nbsp;19/8</p>
+            <p class="contacts__text">Санкт-Петербург</p>
+          </address>
+        </section>
+      </div>
 
       <section class="map page-footer__map">
         <h2 class="visually-hidden">Как нас найти</h2>
         <div class="map__content">
           <img class="visually-hidden" src="img/content/map-mobile.jpg" alt="Карта с местоположением Cat Energy" width="1440" height="400">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300289!2d30.320858715843375!3d59.93871916905453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1639360965037!5m2!1sru!2s" width="100%" height="362" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8b80e85916efe79f7e2517a47de9bf9e06d0c08ed619a5f6d8295387f04729a&amp;source=constructor"></iframe>
         </div>
       </section>
 
-      <div class="page-footer__wrapper container">
-        <a class="page-footer__logo logo">
-          <span class="visually-hidden">Cat Energy</span>
-          <svg class="logo__text" width="128" height="24" role="img">
-            <use xlink:href="img/sprite.svg#logo-text"></use>
-          </svg>
-        </a>
+      <div class="page-footer__wrapper">
+        <div class="container">
+          <a class="page-footer__logo logo">
+            <span class="visually-hidden">Cat Energy</span>
+            <svg class="logo__text" width="128" height="24" role="img">
+              <use xlink:href="img/sprite.svg#logo-text"></use>
+            </svg>
+          </a>
 
-        <section class="socials page-footer__socials">
-          <h2 class="visually-hidden">Cat Energy в соцсетях</h2>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">ВКонтакте</span>
-                <svg class="socials__icon" width="23" height="16" role="img">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy/">
-                <span class="visually-hidden">Instagram</span>
-                <svg class="socials__icon" width="16" height="16" role="img">
-                  <use xlink:href="img/sprite.svg#icon-ig"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Facebook</span>
-                <svg class="socials__icon" width="11" height="18" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </section>
+          <section class="socials page-footer__socials">
+            <h2 class="visually-hidden">Cat Energy в соцсетях</h2>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">ВКонтакте</span>
+                  <svg class="socials__icon" width="23" height="16" role="img">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy/">
+                  <span class="visually-hidden">Instagram</span>
+                  <svg class="socials__icon" width="16" height="16" role="img">
+                    <use xlink:href="img/sprite.svg#icon-ig"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Facebook</span>
+                  <svg class="socials__icon" width="11" height="18" role="img">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
 
-        <a class="copywrite page-footer__copywrite" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copywrite__text">HTML&nbsp;Academy</span>
-          <svg class="copywrite__icon" width="27" height="34" role="img">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
-          </svg>
-        </a>
+          <a class="copywrite page-footer__copywrite" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copywrite__text">HTML&nbsp;Academy</span>
+            <svg class="copywrite__icon" width="27" height="34" role="img">
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
+    <script src="js/main.js"></script>
   </body>
 </html>
