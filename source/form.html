@@ -47,52 +47,54 @@
       <div class="order">
         <p class="order__title container">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
         <form class="order__form order-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="order-form__set order-form__info container">
-            <legend class="visually-hidden">Данные кота</legend>
-            <ul class="order-form__list">
-              <li class="order-form__item">
-                <label class="order-form__label" for="cat-name">Имя:<b class="order-form__label-required">*</b></label>
-                <!-- Для отображения ошибки ввода полю input необходимо добавить класс .error-field -->
-                <input class="order-form__field" type="text" name="cat-name" id="cat-name" required>
-              </li>
-              <li class="order-form__item">
-                <label class="order-form__label" for="cat-weight">Вес (кг):<b class="order-form__label-required">*</b></label>
-                <input class="order-form__field" type="text" name="cat-weight" id="cat-weight" required>
-              </li>
-              <li class="order-form__item">
-                <label class="order-form__label" for="cat-age">Возраст (лет):</label>
-                <input class="order-form__field" type="text" name="cat-age" id="cat-age">
-              </li>
-            </ul>
-          </fieldset>
+          <div class="order-form__info container">
+            <fieldset class="order-form__set order-form__data">
+              <legend class="visually-hidden">Данные кота</legend>
+              <ul class="order-form__list">
+                <li class="order-form__item">
+                  <label class="order-form__label" for="cat-name">Имя:<b class="order-form__label-required">*</b></label>
+                  <!-- Для отображения ошибки ввода полю input необходимо добавить класс .error-field -->
+                  <input class="order-form__field" type="text" name="cat-name" id="cat-name" required>
+                </li>
+                <li class="order-form__item">
+                  <label class="order-form__label" for="cat-weight">Вес (кг):<b class="order-form__label-required">*</b></label>
+                  <input class="order-form__field" type="text" name="cat-weight" id="cat-weight" required>
+                </li>
+                <li class="order-form__item">
+                  <label class="order-form__label" for="cat-age">Возраст (лет):</label>
+                  <input class="order-form__field" type="text" name="cat-age" id="cat-age">
+                </li>
+              </ul>
+            </fieldset>
 
-          <fieldset class="order-form__set order-form__program container">
-            <legend class="visually-hidden">Что нужно коту</legend>
+            <fieldset class="order-form__set order-form__program">
+              <legend class="visually-hidden">Что нужно коту</legend>
 
-            <ul class="order-form__list">
-              <li class="order-form__item">
-                <label class="control">
-                  <input class="control__input visually-hidden" type="radio" name="program" value="slimming" checked>
-                  <span class="control__mark"></span>
-                  <span class="control__label">Похудение</span>
-                </label>
-              </li>
-              <li class="order-form__item">
-                <label class="control">
-                  <input class="control__input visually-hidden" type="radio" name="program" value="weight-gain">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Набор массы</span>
-                </label>
-              </li>
-              <li class="order-form__item">
-                <label class="control">
-                  <input class="control__input visually-hidden" type="radio" name="program" value="need-help">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+              <ul class="order-form__list">
+                <li class="order-form__item">
+                  <label class="control">
+                    <input class="control__input visually-hidden" type="radio" name="program" value="slimming" checked>
+                    <span class="control__mark"></span>
+                    <span class="control__label">Похудение</span>
+                  </label>
+                </li>
+                <li class="order-form__item">
+                  <label class="control">
+                    <input class="control__input visually-hidden" type="radio" name="program" value="weight-gain">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Набор массы</span>
+                  </label>
+                </li>
+                <li class="order-form__item">
+                  <label class="control">
+                    <input class="control__input visually-hidden" type="radio" name="program" value="need-help">
+                    <span class="control__mark"></span>
+                    <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <fieldset class="order-form__set order-form__contacts">
             <legend class="order-form__title main-title">

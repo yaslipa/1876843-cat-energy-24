@@ -1,4 +1,15 @@
 .order__title {
-  margin-bottom: 38px;
   .set-font(14px; 1.25; uppercase);
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 0 calc(@tablet-padding + 40px);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 @desktop-padding;
+  }
 }
