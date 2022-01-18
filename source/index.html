@@ -20,7 +20,7 @@
           <use xlink:href="img/sprite.svg#logo-text"></use>
         </svg>
       </a>
-      <nav class="main-nav main-nav--no-js">
+      <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -41,7 +41,7 @@
 
     <main class="page-main">
       <section class="hero container">
-        <h1 class="hero__title">Функциональное<br> питание для&nbsp;котов</h1>
+        <h1 class="hero__title">Функциональное<br aria-hidden="true"> питание для&nbsp;котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <picture class="hero__img">
           <source media="(min-width: 1280px)" srcset="img/can-desktop.png">
@@ -138,9 +138,9 @@
     <footer class="page-footer">
       <div class="container">
         <section class="contacts page-footer__contacts">
-          <h2 class="contacts__title">Приглашаем<br>к&nbsp;сотрудничеству<br>дилеров!</h2>
+          <h2 class="contacts__title">Приглашаем<br aria-hidden="true">к&nbsp;сотрудничеству<br aria-hidden="true">дилеров!</h2>
           <address class="contacts__address">
-            <p class="contacts__text">ул. Большая<br> Конюшенная, д.&nbsp;19/8</p>
+            <p class="contacts__text">ул. Большая<br aria-hidden="true"> Конюшенная, д.&nbsp;19/8</p>
             <p class="contacts__text">Санкт-Петербург</p>
           </address>
         </section>
@@ -150,7 +150,7 @@
         <h2 class="visually-hidden">Как нас найти</h2>
         <div class="map__content">
           <img class="visually-hidden" src="img/content/map-mobile.jpg" alt="Карта с местоположением Cat Energy" width="1440" height="400">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8b80e85916efe79f7e2517a47de9bf9e06d0c08ed619a5f6d8295387f04729a&amp;source=constructor"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8b80e85916efe79f7e2517a47de9bf9e06d0c08ed619a5f6d8295387f04729a&amp;source=constructor" width=100% height="400" title="Карта с местоположением Cat Energy"></iframe>
         </div>
       </section>
 

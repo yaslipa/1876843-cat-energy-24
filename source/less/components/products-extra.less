@@ -1,28 +1,53 @@
 .products-extra {
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.products-extra__title {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .products-extra__wrapper {
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 245px;
     justify-content: space-between;
+    column-gap: 80px;
   }
 }
 
 .products-extra__list {
-  flex-grow: 1;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    min-height: 288px;
+    margin-bottom: 0;
+  }
 }
 
 .products-extra__card {
   display: grid;
   align-items: baseline;
-  gap: 15px;
+  gap: 13px;
   padding: 13px 0 18px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--gray);
 
   &:first-child {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid var(--gray);
   }
 
   @media (max-width: @mobile-width-only) {
@@ -30,8 +55,20 @@
   }
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     gap: 23px 40px;
+    margin-top: -1px;
+    padding: 26px 38px;
+    border: 1px solid var(--gray);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 244px;
+    gap: 0;
+    align-items: center;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
   }
 }
 
@@ -42,6 +79,14 @@
   @media (max-width: @mobile-width-only) {
     grid-column: 1 / -1;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 80px;
+  }
 }
 
 .product-extra__link-name {
@@ -51,11 +96,28 @@
 .product-extra__details {
   display: flex;
   justify-content: space-between;
+  text-align: right;
   margin: 0;
   font-size: 14px;
 
   @media (max-width: @mobile-width-only) {
     grid-column: 1 / -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.product-extra__value {
+  @media (min-width: @tablet-width) {
+    min-width: 93px;
+    margin: 0 0 0 10px;
   }
 }
 
@@ -64,5 +126,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 3 / -1;
+    min-width: 244px;
   }
 }

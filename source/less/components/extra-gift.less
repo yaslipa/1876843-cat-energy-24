@@ -1,21 +1,37 @@
 .extra-gift {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
-  width: 280px;
-  height: 289px;
   margin: 0 auto;
-  padding: 186px 60px 40px;
   font-size: 16px;
   text-align: center;
   color: var(--white);
   background: no-repeat 50% 0;
-  background-size: 280px 289px;
-  background-image:
-    linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 289px, transparent 289px),
-    url("@{images}/content/order-gift-mobile.jpg");
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    height: 289px;
+    background-image:
+      linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 289px, transparent 289px),
+      url("@{images}/content/order-gift-mobile.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    height: 200px;
+    background-image:
+      linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 200px, transparent 200px),
+      url("@{images}/content/order-gift-tablet.jpg");
+  }
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    margin: 0 0 0 79px;
+    height: 289px;
+    padding: 0 60px;
+    background-image:
+      linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 289px, transparent 289px),
+      url("@{images}/content/order-gift-mobile.jpg");
   }
 }
 
