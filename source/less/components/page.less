@@ -15,7 +15,7 @@
 
   @media (min-width: @desktop-width) {
     &:not(&--inner) {
-      & .main-nav__link {
+      .main-nav__link {
         color: var(--white);
       }
 
@@ -37,13 +37,31 @@
   }
 
   &--inner {
-    & .contacts {
-      background-color: var(--bg-color-secondary);
+    .page-header {
+      @media (max-width: @mobile-width-only) {
+        border-bottom: 1px solid var(--border-color);
+      }
     }
 
-    @media (max-width: @mobile-width-only) {
-      & .page-header {
-        border-bottom: 1px solid var(--border-color);
+    .contacts {
+      background-color: var(--bg-color-secondary);
+
+      @media (max-width: @mobile-width-only) {
+        margin: 0 -@mobile-padding;
+        padding-left: @mobile-padding;
+        padding-right: @mobile-padding;
+      }
+
+      @media (min-width: @tablet-width) {
+        margin: 0 -@tablet-padding;
+        padding-left: @tablet-padding;
+        padding-right: @tablet-padding;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin: 0;
+        padding: 0 80px;
+        background-color: var(--bg-color-primary);
       }
     }
   }

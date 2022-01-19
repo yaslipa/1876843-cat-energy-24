@@ -4,6 +4,10 @@
   @media (max-width: @mobile-width-only) {
     padding: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 68px;
+  }
 }
 
 .products__list {
@@ -16,6 +20,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-top: 30px;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
@@ -23,5 +28,13 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     gap: 63px 80px;
+  }
+}
+
+.products__item {
+  @media (min-width: @tablet-width) {
+    padding: 0 39px 39px;
+    background-color: var(--bg-color-secondary);
+    border-top: 73px solid var(--bg-color-primary);
   }
 }

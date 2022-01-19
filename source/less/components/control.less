@@ -6,6 +6,11 @@
   .set-font(16px; 1.2; uppercase);
   padding: 5px 0 0 15px;
   color: var(--gray-darkest);
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    font-size: 20px;
+  }
 }
 
 .control__mark {
@@ -17,6 +22,11 @@
   width: 30px;
   height: 30px;
   border: 1px solid var(--gray);
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 
   &::before {
     position: absolute;
@@ -34,6 +44,11 @@
     height: 14px;
     background-color: var(--btn-bg-primary);
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &[type="checkbox"]:checked ~ .control__mark::before {
@@ -42,6 +57,12 @@
     border-left: 2px solid var(--btn-bg-primary);
     border-bottom: 2px solid var(--btn-bg-primary);
     transform: translateY(-2px) skewX(13deg) rotate(-40deg);
+
+    @media (min-width: @tablet-width) {
+      width: 25px;
+      height: 12px;
+      transform: translateY(-4px) skewX(12deg) rotate(-43deg);
+    }
   }
 
   &:hover ~ .control__mark {
