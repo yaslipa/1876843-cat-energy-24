@@ -2,11 +2,31 @@
   display: flex;
   align-items: center;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.6;
+  }
+}
+
+.logo__icon {
+  @media (min-width: @tablet-width) {
+    margin-right: 12px;
+
+    img {
+      width: 61px;
+      height: 51px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 14px;
+
+    img {
+      width: 71px;
+      height: 59px;
+    }
   }
 }

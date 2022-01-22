@@ -28,6 +28,22 @@
   @media (max-width: @mobile-width-only) {
     position: absolute;
     justify-content: space-between;
-    width: 65%;
+    width: calc(50% + 70px);
+    min-height: 65px;
+  }
+
+  .logo__text {
+    width: 101px;
+    height: 18px;
+    fill: var(--almost-black);
+
+    @media (min-width: @tablet-width) {
+      width: 102px;
+      height: 20px;
+
+      path:last-child {
+        fill: var(--gray-darken);
+      }
+    }
   }
 }
