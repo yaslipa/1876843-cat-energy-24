@@ -15,10 +15,15 @@
 }
 
 .page-footer__logo {
+  flex-shrink: 0;
   padding: 10px;
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: -10px;
   }
 }
 
@@ -43,19 +48,15 @@
 }
 
 .page-footer__socials {
-  width: 100%;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-
   @media (max-width: @mobile-width-only) {
+    width: 100%;
     margin-bottom: 21px;
-  }
-
-  @media (min-width: @tablet-width) {
-    border: none;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
   }
 }
 
 .page-footer__copywrite {
+  flex-shrink: 0;
   width: 100%;
 }

@@ -32,19 +32,66 @@
   position: relative;
   counter-increment: about-counter;
 
-  @media (min-width: @tablet-width) {
-    min-height: 280px;
+  @media (max-width: @mobile-width-only) {
+    padding-left: 80px;
+  }
 
-    &::before {
+  @media (min-width: @tablet-width) {
+    min-height: 240px;
+    margin-right: 60px;
+    padding-top: 111px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--color-main) no-repeat 50% 50%;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
       .set-font(280px);
       position: absolute;
-      bottom: 0;
+      top: -40px;
       right: 0;
       z-index: -1;
       color: var(--bg-color-secondary);
       content: counter(about-counter);
     }
   }
+}
+
+.about-product__benefit::before {
+  background-image: url("@{images}/icons/leaf.svg");
+  background-size: 30px 32px;
+}
+
+.about-product__easiness::before {
+  background-image: url("@{images}/icons/water.svg");
+  background-size: 29px 31px;
+}
+
+.about-product__frequency::before {
+  background-image: url("@{images}/icons/eat.svg");
+  background-size: 25px 30px;
+}
+
+.about-product__result::before {
+  background-image: url("@{images}/icons/clock.svg");
+  background-size: 32px 33px;
 }
 
 .about-product__title {
@@ -54,6 +101,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
+    margin-bottom: 70px;
   }
 }
 
