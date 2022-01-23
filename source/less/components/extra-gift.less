@@ -1,20 +1,14 @@
 .extra-gift {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-shrink: 0;
   margin: 0 auto;
   font-size: 16px;
-  text-align: center;
   color: var(--white);
   background: no-repeat 50% 0;
 
   @media (max-width: @mobile-width-only) {
     width: 280px;
-    height: 289px;
-    background-image:
-      linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 289px, transparent 289px),
-      url("@{images}/content/order-gift-mobile.jpg");
   }
 
   @media (min-width: @tablet-width) {
@@ -27,15 +21,49 @@
 
   @media (min-width: @desktop-width) {
     width: 245px;
+  }
+
+  @media (max-width: @mobile-width-only), (min-width: @desktop-width) {
+    flex-direction: column;
     height: 289px;
-    padding: 0 60px;
+    text-align: center;
     background-image:
       linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 289px, transparent 289px),
       url("@{images}/content/order-gift-mobile.jpg");
   }
+
+  &::before {
+    background: url("@{images}/icons/gift.svg") no-repeat;
+    content: "";
+
+    @media (max-width: @mobile-width-only) {
+      width: 78px;
+      height: 80px;
+      margin-top: 59px;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 50%;
+      height: 83px;
+      background-position-x: 77px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 80px;
+      height: 83px;
+      margin-top: 55px;
+      background-position-x: 0;
+    }
+  }
 }
 
 .extra-gift__text {
-  margin: 0;
-  padding: 0;
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (max-width: @mobile-width-only), (min-width: @desktop-width) {
+    margin: auto;
+    padding: 0 30px;
+  }
 }
