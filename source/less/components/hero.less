@@ -6,8 +6,8 @@
   line-height: 1;
 
   @media (max-width: @mobile-width-only) {
-    min-height: 302px;
     align-items: center;
+    min-height: 302px;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
@@ -30,6 +30,12 @@
       background-image:
         linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 302px, transparent 302px),
         url("@{images}/content/hero-bg-mobile.jpg");
+
+      @media @retina {
+        background-image:
+          linear-gradient(to bottom, rgba(var(--color-main-rgb), 0.85) 302px, transparent 302px),
+          url("@{images}/content/hero-bg-mobile@2x.jpg");
+      }
     }
   }
 
@@ -71,22 +77,24 @@
 }
 
 .hero__img {
+  display: block;
+
   @media (max-width: @mobile-width-only) {
     width: 280px;
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
     z-index: -1;
-    align-self: center;
-    order: 4;
     width: 709px;
-    margin-top: -80px;
+    margin: -80px auto 0;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 0;
-    margin: 0 0 0 230px;
+    left: 50%;
+    margin: 0 0 0 -162px;
     width: 552px;
   }
 }
@@ -96,19 +104,18 @@
   width: max-content;
 
   @media (max-width: @mobile-width-only) {
+    order: 4;
     width: 100%;
     margin-top: 2px;
     font-size: 14px;
   }
 
   @media (min-width: @tablet-width) {
-    order: 3;
     margin-left: 91px;
     padding: 12px 26px;
   }
 
   @media (min-width: @desktop-width) {
-    order: 3;
     margin-left: 80px;
     padding: 15px 26px;
   }

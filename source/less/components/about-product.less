@@ -33,7 +33,14 @@
   counter-increment: about-counter;
 
   @media (max-width: @mobile-width-only) {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
     padding-left: 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -106,7 +113,7 @@
 }
 
 .about-product__text {
-  margin: 0 0 20px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     line-height: 1.5;
