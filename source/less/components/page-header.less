@@ -16,8 +16,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 26px;
-    padding-bottom: 26px;
     min-height: 141px;
   }
 }
@@ -32,10 +30,21 @@
     min-height: 65px;
   }
 
+  @media (min-width: @tablet-width) {
+    margin: 5px 0 0 -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 29px;
+  }
+
   .logo__text {
     width: 101px;
     height: 18px;
-    fill: var(--almost-black);
+
+    @media (max-width: @mobile-width-only) {
+      margin-bottom: 3px;
+    }
 
     @media (min-width: @tablet-width) {
       width: 102px;
@@ -44,6 +53,11 @@
       path:last-child {
         fill: var(--gray-darken);
       }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 122px;
+      height: 23px;
     }
   }
 }

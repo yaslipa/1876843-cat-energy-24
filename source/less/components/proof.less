@@ -1,29 +1,31 @@
 .proof {
   background-color: var(--bg-color-tertiary);
-  padding: 20px 0 40px;
+  padding: 20px 0 45px;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 0 55px;
+    padding: 35px 0 61px;
     background-color: var(--bg-color-primary);
-    background-image: linear-gradient(to top, var(--bg-color-tertiary) 462px, transparent 462px);
+    background-image: linear-gradient(to top, var(--bg-color-tertiary) 461px, transparent 461px);
     border-top: 1px solid var(--border-color);
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 200px;
-    padding-bottom: 65px;
-    background-color: var(--bg-color-tertiary);
+    margin-top: 185px;
+    padding-bottom: 70px;
+    background: var(--bg-color-secondary);
     border: none;
 
     .container {
       display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
   }
 }
 
-.proof_description {
+.proof__description {
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 38%;
     margin-top: -200px;
   }
 }
@@ -39,21 +41,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 20px 0 80px;
+    margin: 26px 0 73px;
   }
 }
 
 .proof__text {
-  margin: 0 0 20px 0;
+  margin: 0 0 19px 0;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     font-size: 16px;
     line-height: 1.5;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 70px;
+    margin-bottom: 68px;
   }
 }
 
@@ -69,7 +72,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(2, 162px);
-    row-gap: 50px;
+    row-gap: 53px;
   }
 }
 
@@ -97,7 +100,7 @@
       grid-column: 1 / -1;
       display: grid;
       grid-template-columns: max-content 1fr;
-      column-gap: 32px;
+      column-gap: 25px;
       justify-self: start;
       width: 100%;
     }
@@ -160,7 +163,11 @@
 }
 
 .proof__slider {
-  padding-top: 25px;
+  padding-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 81px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-top: -200px;
