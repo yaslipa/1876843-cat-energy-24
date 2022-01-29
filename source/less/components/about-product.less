@@ -1,14 +1,15 @@
 .about-product {
-  margin-bottom: 13px;
+  margin-bottom: 29px;
   padding-top: 20px;
   padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 40px;
+    margin-bottom: 26px;
+    padding-top: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 60px;
+    padding-top: 68px;
   }
 }
 
@@ -18,13 +19,13 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
-    row-gap: 37px;
-    column-gap: 90px;
+    gap: 77px 59px;
     font-size: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, minmax(230px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -45,7 +46,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 240px;
-    margin-right: 60px;
+    margin-right: 77px;
     padding-top: 111px;
   }
 
@@ -79,6 +80,16 @@
       content: counter(about-counter);
     }
   }
+
+  &:first-child::after {
+    @media (min-width: @tablet-width) {
+      margin-right: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 15px;
+    }
+  }
 }
 
 .about-product__benefit::before {
@@ -103,12 +114,12 @@
 
 .about-product__title {
   .set-font(36px);
-  margin: 3px 0 30px;
+  margin: 3px 0 43px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
   }
 }
 

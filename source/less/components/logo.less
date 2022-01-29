@@ -12,21 +12,22 @@
 }
 
 .logo__icon {
-  @media (min-width: @tablet-width) {
-    margin-right: 12px;
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 5px;
+  }
 
-    img {
-      width: 61px;
-      height: 51px;
-    }
+  @media (min-width: @tablet-width) {
+    margin-right: 11px;
+    width: 61px;
+    height: 51px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 14px;
-
-    img {
-      width: 71px;
-      height: 59px;
-    }
+    width: 71px;
+    height: 59px;
   }
+}
+
+.logo__text {
+  fill: var(--almost-black);
 }

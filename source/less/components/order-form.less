@@ -5,11 +5,15 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 72px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .order-form__title {
   @media (min-width: @tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 74px;
   }
 }
 
@@ -19,17 +23,17 @@
   border: none;
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 21px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 72px;
   }
 }
 
 .order-form__list:not(.order-form__program .order-form__list) {
   @media (min-width: @tablet-width) {
-    padding: 0 40px;
+    padding: 0 37px 0 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,7 +47,7 @@
   align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 20px;
@@ -58,6 +62,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    padding-right: 17px;
   }
 }
 
@@ -84,25 +89,25 @@
     border-color: var(--gray-darken);
     outline: none;
 
-    & ~ .order-form__icon:not(.order-form__icon--email) {
+    ~ .order-form__icon:not(.order-form__icon--email) {
       fill: var(--color-main);
     }
 
-    & ~ .order-form__icon--email {
+    ~ .order-form__icon--email {
       stroke: var(--color-main);
     }
   }
+}
 
-  &.error-field {
-    border-color: var(--color-danger);
+.error-field[required] {
+  border-color: var(--color-danger);
 
-    & ~ .order-form__icon:not(.order-form__icon--email) {
-      fill: var(--color-danger);
-    }
+  ~ .order-form__icon:not(.order-form__icon--email) {
+    fill: var(--color-danger);
+  }
 
-    & ~ .order-form__icon--email {
-      stroke: var(--color-danger);
-    }
+  ~ .order-form__icon--email {
+    stroke: var(--color-danger);
   }
 }
 
@@ -119,7 +124,7 @@
 .order-form__icon {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 13px;
 
   @media (min-width: @tablet-width) {
     right: 16px;
@@ -156,6 +161,8 @@
   border: 1px solid var(--gray-light);
 
   @media (min-width: @tablet-width) {
+    height: 174px;
+    padding: 13px 18px;
     font-size: 20px;
   }
 
@@ -175,7 +182,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    margin-bottom: 70px;
+    margin-bottom: 67px;
   }
 }
 
@@ -190,15 +197,19 @@
   border-bottom: 1px solid var(--border-color);
 
   @media (max-width: @mobile-width-only) {
-    margin: 0 -@mobile-padding 25px;
+    margin: 0 -@mobile-padding 26px;
     padding: 22px @mobile-padding 18px;
   }
 
   @media (min-width: @tablet-width) {
     width: auto;
-    margin: 0 40px 70px;
-    padding: 25px 28px;
+    margin: 0 37px 73px 41px;
+    padding: 24px 28px;
     border: 1px solid var(--border-color);
+
+    .order-form__item:not(:last-child) {
+      margin-bottom: 13px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -214,11 +225,15 @@
   padding: 0;
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 21px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
   }
 
   .order-form__list {
@@ -240,18 +255,22 @@
 
   &::after {
     @media (max-width: @mobile-width-only) {
-      top: 15px;
+      top: 16px;
     }
   }
 }
 
 .order-form__comment {
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 61px;
   }
 
   .container {
@@ -263,6 +282,14 @@
       padding: 0 @desktop-padding;
     }
   }
+
+  .order-form__title {
+    margin-bottom: 37px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 74px;
+    }
+  }
 }
 
 .order-form__extra {
@@ -270,7 +297,11 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
   }
 
   .order-form__title {
@@ -283,7 +314,7 @@
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px 61px;
+      gap: 20px 57px;
       align-items: start;
     }
 
@@ -317,6 +348,7 @@
 
 .order-form__button {
   width: 100%;
+  padding: 10px 26px;
   font-size: 16px;
 
   @media (max-width: @mobile-width-only) {

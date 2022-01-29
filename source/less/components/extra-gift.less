@@ -72,11 +72,16 @@
 }
 
 .extra-gift__text {
+  @media (max-width: @mobile-width-only) {
+    margin: auto;
+    padding: 8px 30px 0;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0 70px;
   }
 
-  @media (max-width: @mobile-width-only), (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     margin: auto;
     padding: 0 30px;
   }
