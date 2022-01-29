@@ -11,4 +11,5 @@ npm-debug.*
 source/css/*.css
 source/css/*.map
 source/js/pixel-glass/
+source/img/sources/
 Thumbs.db
