@@ -68,7 +68,6 @@ const createWebp = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-
 // SVG
 
 const svg = () =>
@@ -102,7 +101,7 @@ const copy = (done) => {
 
 // Clean
 
-export const clean = () => {
+const clean = () => {
   return del('build');
 };
 
